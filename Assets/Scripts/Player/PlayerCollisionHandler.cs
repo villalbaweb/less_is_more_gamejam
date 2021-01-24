@@ -13,7 +13,8 @@ namespace LessIsMore.Player
         {
             if(IsDamageLayer(other.gameObject.layer))
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                transform.position = new Vector3(0,0,0);
             }    
         }
 
