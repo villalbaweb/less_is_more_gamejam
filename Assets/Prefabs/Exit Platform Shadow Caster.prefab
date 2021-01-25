@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3089598757931207153
+--- !u!1 &6435307274935698759
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3089598757931207159}
-  - component: {fileID: 3089598757931207158}
-  - component: {fileID: 3089598757931207156}
+  - component: {fileID: 6435307274935698758}
+  - component: {fileID: 6435307274935698756}
+  - component: {fileID: 6435307274935698757}
+  - component: {fileID: 6435307274935698763}
   m_Layer: 8
-  m_Name: Ground
+  m_Name: Exit Platform Shadow Caster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3089598757931207159
+--- !u!4 &6435307274935698758
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089598757931207153}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03095305, y: -0.7791014, z: 0}
-  m_LocalScale: {x: 6.5, y: 0.05, z: 0.43}
+  m_GameObject: {fileID: 6435307274935698759}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 109.45, y: 9.97, z: 0}
+  m_LocalScale: {x: 0.3, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3089598757931207158
+--- !u!212 &6435307274935698756
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089598757931207153}
+  m_GameObject: {fileID: 6435307274935698759}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1010613839
-  m_SortingLayer: 3
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7629e4ede3260754bbacb2e959939171, type: 3}
-  m_Color: {r: 0.32156864, g: 0.61960787, b: 0.5803922, a: 1}
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e5cd0e2d27353ab41923ed11f8d0eb3f, type: 3}
+  m_Color: {r: 0.8784314, g: 0.4745098, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -83,20 +84,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3089598757931207156
+--- !u!61 &6435307274935698757
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089598757931207153}
+  m_GameObject: {fileID: 6435307274935698759}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09414768, y: 0}
+  m_Offset: {x: 0.4050281, y: -0.45116043}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,5 +108,34 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18.861067, y: 10.8}
+  m_Size: {x: 15.797777, y: 9.897678}
   m_EdgeRadius: 0
+--- !u!114 &6435307274935698763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435307274935698759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 77b03d3c
+  m_ShapePath:
+  - {x: -8.776879, y: 2.752061, z: 0}
+  - {x: 8.966498, y: 2.6448846, z: 0}
+  - {x: 8.422239, y: 4.6927166, z: 0}
+  - {x: -2.92638, y: 4.5622315, z: 0}
+  - {x: -5.4710627, y: 4.96938, z: 0}
+  - {x: -6.997857, y: 4.8675923, z: 0}
+  - {x: -8.569818, y: 4.56593, z: 0}
+  m_ShapePathHash: -134841759
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -266840
