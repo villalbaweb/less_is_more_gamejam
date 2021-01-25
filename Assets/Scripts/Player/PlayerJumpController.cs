@@ -57,6 +57,7 @@ namespace LessIsMore.Player
 
             if (canJump)
             {
+                _playerJumpAimController.SetAimVisibility(true);
                 _mouseState = MouseButtonState.Hold;
                 _timer.StartTimer();
                 _jumpStamina = maxStamina;
@@ -75,6 +76,7 @@ namespace LessIsMore.Player
             if(!_rigidbody2D) return;
 
             print($"Jump Stamina {_jumpStamina}");
+            _playerJumpAimController.SetAimVisibility(false);
 
             Vector2 jumpVector = new Vector2(_playerJumpAimController.AimDirection.x * _jumpStamina, _playerJumpAimController.AimDirection.y * _jumpStamina);
             _rigidbody2D.AddForce(jumpVector, ForceMode2D.Impulse);
