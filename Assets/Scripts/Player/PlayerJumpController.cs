@@ -75,8 +75,8 @@ namespace LessIsMore.Player
         {
             if(!_rigidbody2D) return;
 
-            print($"Jump Stamina {_jumpStamina}");
             _playerJumpAimController.SetAimVisibility(false);
+            _playerJumpAimController.ResetLoadIndicator();
 
             Vector2 jumpVector = new Vector2(_playerJumpAimController.AimDirection.x * _jumpStamina, _playerJumpAimController.AimDirection.y * _jumpStamina);
             _rigidbody2D.AddForce(jumpVector, ForceMode2D.Impulse);
@@ -85,6 +85,7 @@ namespace LessIsMore.Player
         private void TimerOnTick()
         {
             _jumpStamina--;
+            _playerJumpAimController.IncreaseLoadIndicator(0.1f);
         }
 
         private void TimerOnFinish()

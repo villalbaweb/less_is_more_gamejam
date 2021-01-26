@@ -49,8 +49,12 @@ namespace LessIsMore.Player
 
         public void ResetLoadIndicator()
         {
-            print("test");
-            _aimLoadTransform.position = new Vector3(-1.4f, 0, 0);
+            _aimLoadTransform.localPosition = new Vector3(-1f, 0, 0);
+        }
+
+        public void IncreaseLoadIndicator(float xFactor)
+        {
+            _aimLoadTransform.localPosition = new Vector3(_aimLoadTransform.localPosition.x + xFactor, 0, 0);
         }
     }
 }
