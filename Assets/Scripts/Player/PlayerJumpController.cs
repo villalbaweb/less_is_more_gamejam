@@ -6,6 +6,7 @@ namespace LessIsMore.Player
     public class PlayerJumpController : MonoBehaviour
     {
         // config
+        [Tooltip("Max jump stamina, this will be reduced based on the Timer's settings.")]
         [SerializeField] float maxStamina = 14f;
 
         // cache
