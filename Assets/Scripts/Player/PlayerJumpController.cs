@@ -90,7 +90,6 @@ namespace LessIsMore.Player
             if(Mathf.Approximately(_jumpStamina, 0f)) return;
 
             _jumpStamina -= _reduceStaminePerTick;
-            print(_jumpStamina);
         }
 
         private void TimerOnFinish()

@@ -1,20 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace LessIsMore.Player
 {
-    // config
-
     public class PlayerCollisionHandler : MonoBehaviour
     {
         // config
         [SerializeField] LayerMask damageLayersMask = new LayerMask();
+        [SerializeField] UnityEvent onCollisionEvent = null;
 
         private void OnCollisionEnter2D(Collision2D other) 
         {
             if(IsDamageLayer(other.gameObject.layer))
             {
-                //Destroy(gameObject);
-                transform.position = new Vector3(0,0,0);
+                onCollisionEvent.Invoke();
             }    
         }
 
