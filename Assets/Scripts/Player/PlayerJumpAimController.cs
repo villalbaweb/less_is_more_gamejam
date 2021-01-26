@@ -9,6 +9,7 @@ namespace LessIsMore.Player
         private Transform _aimTransform;
         private Transform _aimLoadTransform;
         private GetMouseWorldPosition _getMouseWorldPosition;
+        private Timer _timer;
 
         // properties
         public Vector3 AimDirection => aimDirection;
@@ -23,8 +24,19 @@ namespace LessIsMore.Player
             _aimLoadTransform = _aimTransform.Find("Aim Load");
             _spriteRenderer = _aimTransform.GetComponent<SpriteRenderer>();
             _getMouseWorldPosition = GetComponent<GetMouseWorldPosition>();
+            _timer = GetComponent<Timer>();
 
             ResetLoadIndicator();
+        }
+
+        private void OnEnable() 
+        {
+            _timer.OnTick += TimerOnTick;
+        }
+
+        private void OnDisable() 
+        {
+            _timer.OnTick -= TimerOnTick;
         }
 
         // Update is called once per frame
@@ -54,6 +66,13 @@ namespace LessIsMore.Player
 
         public void IncreaseLoadIndicator(float xFactor)
         {
+            _aimLoadTransform.localPosition = new Vector3(_aimLoadTransform.localPosition.x + xFactor, 0, 0);
+        }
+
+        private void TimerOnTick()
+        {
+            float xFactor = (_timer.TickTime / _timer.TotalTime) * 2;
+
             _aimLoadTransform.localPosition = new Vector3(_aimLoadTransform.localPosition.x + xFactor, 0, 0);
         }
     }

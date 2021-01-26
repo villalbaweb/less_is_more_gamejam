@@ -23,6 +23,10 @@ public class Timer : MonoBehaviour
         bool isTimerFinished;
         bool isTimerTurnedOff;
 
+        // properties
+        public float TotalTime => totalTime;
+        public float TickTime => tickTime;
+
         // Start is called before the first frame update
         void Awake()
         {

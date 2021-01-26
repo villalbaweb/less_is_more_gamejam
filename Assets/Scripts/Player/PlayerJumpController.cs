@@ -17,6 +17,7 @@ namespace LessIsMore.Player
         // state
         MouseButtonState _mouseState;
         float _jumpStamina;
+        float _reduceStaminePerTick;
 
         private void Awake() 
         {
@@ -27,6 +28,7 @@ namespace LessIsMore.Player
             
             _mouseState = MouseButtonState.Release;
             _jumpStamina = maxStamina;
+            _reduceStaminePerTick = (_timer.TickTime / _timer.TotalTime) * maxStamina;
 
             _timer.StopTimer();
         }
@@ -84,8 +86,10 @@ namespace LessIsMore.Player
 
         private void TimerOnTick()
         {
-            _jumpStamina--;
-            _playerJumpAimController.IncreaseLoadIndicator(0.1f);
+            if(Mathf.Approximately(_jumpStamina, 0f)) return;
+
+            _jumpStamina -= _reduceStaminePerTick;
+            print(_jumpStamina);
         }
 
         private void TimerOnFinish()

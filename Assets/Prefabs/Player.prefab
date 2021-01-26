@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3f6a46df3732e428aee07d3b53dfe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStamina: 15
+  maxStamina: 20
 --- !u!114 &6153852605323155233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,8 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730d79b801e5eef41916f07264d2755f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 10
-  tickTime: 0.1
+  totalTime: 2
+  tickTime: 0.05
   cycle: 0
 --- !u!114 &6153852605323155232
 MonoBehaviour:
@@ -320,7 +320,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47418
+  m_InstanceId: -62288
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0
