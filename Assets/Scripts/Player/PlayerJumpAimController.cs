@@ -7,6 +7,7 @@ namespace LessIsMore.Player
     {
         // cache
         private Transform _aimTransform;
+        private Transform _aimLoadTransform;
         private GetMouseWorldPosition _getMouseWorldPosition;
 
         // properties
@@ -19,8 +20,11 @@ namespace LessIsMore.Player
         private void Awake() 
         {
             _aimTransform = transform.Find("Aim");
+            _aimLoadTransform = _aimTransform.Find("Aim Load");
             _spriteRenderer = _aimTransform.GetComponent<SpriteRenderer>();
             _getMouseWorldPosition = GetComponent<GetMouseWorldPosition>();
+
+            ResetLoadIndicator();
         }
 
         // Update is called once per frame
@@ -41,6 +45,12 @@ namespace LessIsMore.Player
         {
             _spriteRenderer.enabled = isVisible;
             
+        }
+
+        public void ResetLoadIndicator()
+        {
+            print("test");
+            _aimLoadTransform.position = new Vector3(-1.4f, 0, 0);
         }
     }
 }
