@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 1018924166755092962}
   - component: {fileID: 6153852605323155235}
   - component: {fileID: 6153852605323155234}
+  - component: {fileID: 1645889190181192849}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -308,6 +309,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a107cda05b1f244e9b9102fcda6429f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDieEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1645889190181192849}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerDieParticleSystemHandler,
+          Assembly-CSharp
+        m_MethodName: PlayDieParticleSystems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6153852605323155235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +365,22 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 61240
+  m_InstanceId: 32334
+--- !u!114 &1645889190181192849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153852605323155240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41fbda5ed2067aa4999bf4cb127844ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieParticleSystems:
+  - {fileID: 1554693788105764423, guid: 6934416ae03fbcd4781fd7a199c749dd, type: 3}
+  - {fileID: 1554693788105764423, guid: 862343a56accdad4a9866f124241a9be, type: 3}
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0
