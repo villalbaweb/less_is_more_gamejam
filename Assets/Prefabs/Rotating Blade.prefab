@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 149163526393980159}
   - component: {fileID: 149163526393980144}
-  m_Layer: 13
+  - component: {fileID: 3731063011207012857}
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +46,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -66,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 492064635
-  m_SortingLayer: 9
+  m_SortingLayerID: 844269633
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b5a38a80c901f1646b025736a5e8bb8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -80,6 +83,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!331 &3731063011207012857
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149163526393980158}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b5a38a80c901f1646b025736a5e8bb8c, type: 3}
+  m_MaskAlphaCutoff: 1
+  m_FrontSortingLayerID: -1010613839
+  m_BackSortingLayerID: -1010613839
+  m_FrontSortingLayer: 4
+  m_BackSortingLayer: 4
+  m_FrontSortingOrder: 1
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &149163526925617125
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,11 +142,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 149163526925617126}
-  - component: {fileID: 7320652192010434321}
   - component: {fileID: 149163526925617127}
   - component: {fileID: 149163526925617144}
-  - component: {fileID: 149163526925617145}
-  m_Layer: 13
+  - component: {fileID: 7884904525925362337}
+  m_Layer: 10
   m_Name: Rotating Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,27 +167,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &7320652192010434321
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149163526925617125}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &149163526925617127
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: -500
---- !u!114 &149163526925617145
+--- !u!114 &7884904525925362337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,8 +205,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 149163526925617125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af57fbd3e94e10b44828159f9a19eea4, type: 3}
+  m_Script: {fileID: 11500000, guid: d7d85e10affe7f4449fc2a881de2ff52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveRight: 1
-  speed: 10
+  movementFactor: 0
+  movementVector: {x: 2, y: 0}
+  period: 2
