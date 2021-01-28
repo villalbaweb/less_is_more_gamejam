@@ -22,6 +22,7 @@ namespace LessIsMore.Player
         MouseButtonState _mouseState;
         float _jumpStamina;
         float _reduceStaminePerTick;
+        bool _canJump;
 
         private void Awake() 
         {
@@ -52,16 +53,18 @@ namespace LessIsMore.Player
         // Update is called once per frame
         void Update()
         {
+            CanJumpCheck();
             JumpControl();
+        }
+
+        private void CanJumpCheck()
+        {
+            _canJump = _playerGroundedRaycastDetector.IsGroundedOnLayers() && _rigidbody2D.velocity.magnitude <= 0.01;
         }
 
         private void JumpControl()
         {
-            bool canJump = _playerGroundedRaycastDetector.IsGroundedOnLayers() && 
-                _mouseState == MouseButtonState.Release && 
-                Input.GetMouseButton(0); 
-
-            if (canJump)
+            if (_canJump)
             {
                 onLand.Invoke();
 
@@ -76,9 +79,12 @@ namespace LessIsMore.Player
 
         private void StartJumpLoading()
         {
-            _mouseState = MouseButtonState.Hold;
-            _timer.StartTimer();
-            _jumpStamina = maxStamina;
+            if(_mouseState == MouseButtonState.Release && Input.GetMouseButton(0))
+            {
+                _mouseState = MouseButtonState.Hold;
+                _timer.StartTimer();
+                _jumpStamina = maxStamina;
+            }
         }
 
         private void Jump()
