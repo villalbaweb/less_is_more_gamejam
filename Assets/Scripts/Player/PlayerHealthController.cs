@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace LessIsMore.Player
 {
@@ -7,6 +8,7 @@ namespace LessIsMore.Player
         // config
         [SerializeField] int maxHealthPoints = 20;
         [SerializeField] int healthPoints = 20;
+        [SerializeField] UnityEvent onDie = null;
 
         public void IncreaseHealth(int increaseHealthPoints)
         {
@@ -21,6 +23,11 @@ namespace LessIsMore.Player
         public void DecreaseHealthPoint()
         {
             healthPoints --;
+
+            if(healthPoints <= 0)
+            {
+                onDie.Invoke();
+            }
         }
     }
 }

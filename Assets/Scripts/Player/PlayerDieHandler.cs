@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
 namespace LessIsMore.Player
 {
     public class PlayerDieHandler : MonoBehaviour
     {
-        // config
-        [SerializeField] UnityEvent onDieEvent = null;
-
-        public void OnPlayerCollision()
+        public void OnPlayerDead()
         {
-            onDieEvent.Invoke();
+            print("dead...");
         }
     }
 }
