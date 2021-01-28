@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using LessIsMore.Core;
+using UnityEngine.Events;
 
 namespace LessIsMore.Player
 {
@@ -8,6 +9,8 @@ namespace LessIsMore.Player
         // config
         [Tooltip("Max jump stamina, this will be reduced based on the Timer's settings.")]
         [SerializeField] float maxStamina = 14f;
+        [SerializeField] UnityEvent onJump = null;
+        [SerializeField] UnityEvent onLand = null;
 
         // cache
         Rigidbody2D _rigidbody2D;
@@ -77,6 +80,8 @@ namespace LessIsMore.Player
         private void Jump()
         {
             if(!_rigidbody2D) return;
+
+            onJump.Invoke();
 
             _playerJumpAimController.SetAimVisibility(false);
             _playerJumpAimController.ResetLoadIndicator();

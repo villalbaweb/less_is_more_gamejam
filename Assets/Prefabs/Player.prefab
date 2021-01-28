@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 1645889190181192849}
   - component: {fileID: 153135895677720490}
   - component: {fileID: 8089095476608742007}
+  - component: {fileID: 8003500639136822270}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -254,6 +255,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStamina: 20
+  onJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8003500639136822270}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerAnimatorControllerHandler,
+          Assembly-CSharp
+        m_MethodName: OnJumpTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6153852605323155233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +307,19 @@ MonoBehaviour:
       - m_Target: {fileID: 1018924166755092962}
         m_TargetAssemblyTypeName: LessIsMore.Player.PlayerDieHandler, Assembly-CSharp
         m_MethodName: OnPlayerCollision
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8003500639136822270}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerAnimatorControllerHandler,
+          Assembly-CSharp
+        m_MethodName: OnHurtTrigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -382,7 +412,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 276934
+  m_InstanceId: 32330
 --- !u!114 &1645889190181192849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +460,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8003500639136822270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153852605323155240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456ccbefb1036b4ea2cb953ed75bc8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0
