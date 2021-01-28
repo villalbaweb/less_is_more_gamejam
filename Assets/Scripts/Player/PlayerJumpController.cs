@@ -57,34 +57,38 @@ namespace LessIsMore.Player
 
         private void JumpControl()
         {
-            bool canJump = _playerGroundedRaycastDetector.IsGroundedOnLayers() 
-                && _mouseState == MouseButtonState.Release 
-                && Input.GetMouseButton(0);
+            bool canJump = _playerGroundedRaycastDetector.IsGroundedOnLayers() && 
+                _mouseState == MouseButtonState.Release && 
+                Input.GetMouseButton(0); 
 
             if (canJump)
             {
-                _playerJumpAimController.SetAimVisibility(true);
-                _mouseState = MouseButtonState.Hold;
-                _timer.StartTimer();
-                _jumpStamina = maxStamina;
+                onLand.Invoke();
+
+                StartJumpLoading();
             }
 
             if (_mouseState == MouseButtonState.Hold && !Input.GetMouseButton(0))
             {
-                _mouseState = MouseButtonState.Release;
-                _timer.StopTimer();
                 Jump();
             }
         }
 
+        private void StartJumpLoading()
+        {
+            _mouseState = MouseButtonState.Hold;
+            _timer.StartTimer();
+            _jumpStamina = maxStamina;
+        }
+
         private void Jump()
         {
+            _mouseState = MouseButtonState.Release;
+            _timer.StopTimer();
+
             if(!_rigidbody2D) return;
 
             onJump.Invoke();
-
-            _playerJumpAimController.SetAimVisibility(false);
-            _playerJumpAimController.ResetLoadIndicator();
 
             Vector2 jumpVector = new Vector2(_playerJumpAimController.AimDirection.x * _jumpStamina, _playerJumpAimController.AimDirection.y * _jumpStamina);
             _rigidbody2D.AddForce(jumpVector, ForceMode2D.Impulse);

@@ -53,13 +53,23 @@ namespace LessIsMore.Player
             _aimTransform.eulerAngles = new Vector3(0, 0, angle);
         }
 
-        public void SetAimVisibility(bool isVisible)
+        public void OnJumpStart()
         {
-            _spriteRenderer.enabled = isVisible;
-            
+            SetAimVisibility(false);
+            ResetLoadIndicator();
         }
 
-        public void ResetLoadIndicator()
+        public void OnJumpLand()
+        {
+            SetAimVisibility(true);
+        }
+
+        private void SetAimVisibility(bool isVisible)
+        {
+            _spriteRenderer.enabled = isVisible;
+        }
+
+        private void ResetLoadIndicator()
         {
             _aimLoadTransform.localPosition = new Vector3(-1f, 0, 0);
         }

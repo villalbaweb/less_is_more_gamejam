@@ -17,9 +17,14 @@ namespace LessIsMore.Player
             _animator.SetTrigger("IsHurt");
         }
 
-        public void OnJumpTrigger()
+        public void OnJumpStart()
         {
             _animator.SetBool("IsJumping", true);
+        }
+
+        public void OnJumpLand()
+        {
+            _animator.SetBool("IsJumping", false);
         }
     }
 }

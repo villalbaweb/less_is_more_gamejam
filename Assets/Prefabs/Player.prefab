@@ -261,7 +261,47 @@ MonoBehaviour:
       - m_Target: {fileID: 8003500639136822270}
         m_TargetAssemblyTypeName: LessIsMore.Player.PlayerAnimatorControllerHandler,
           Assembly-CSharp
-        m_MethodName: OnJumpTrigger
+        m_MethodName: OnJumpStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6153852605323155244}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerJumpAimController, Assembly-CSharp
+        m_MethodName: OnJumpStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLand:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8003500639136822270}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerAnimatorControllerHandler,
+          Assembly-CSharp
+        m_MethodName: OnJumpLand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6153852605323155244}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerJumpAimController, Assembly-CSharp
+        m_MethodName: OnJumpLand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -412,7 +452,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 32330
+  m_InstanceId: 64078
 --- !u!114 &1645889190181192849
 MonoBehaviour:
   m_ObjectHideFlags: 0
