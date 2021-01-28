@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player Custom Material
-  m_Shader: {fileID: -6465566751694194690, guid: 445ee98c8a4ed6c4db99945282db16a2, type: 3}
+  m_Name: New Player Custom Material
+  m_Shader: {fileID: -6465566751694194690, guid: 9bada47e55f34cd46a715be0c9f06f9c, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -25,5 +25,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_FD7C8A6E: {r: 5.516976, g: 1.1820567, b: 8.64124, a: 0}
+    - Color_E6F7BB6A: {r: 1.3899039, g: 0.37370056, b: 0.37370056, a: 0}
   m_BuildTextureStacks: []

@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 6153852605323155234}
   - component: {fileID: 1645889190181192849}
   - component: {fileID: 153135895677720490}
+  - component: {fileID: 8089095476608742007}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -192,8 +193,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000014901161, y: 0.005673945}
-  m_Size: {x: 0.29575542, y: 0.62555134}
+  m_Offset: {x: -0.012572497, y: 0.07872462}
+  m_Size: {x: 0.48651212, y: 0.90648365}
   m_Direction: 0
 --- !u!50 &6153852605323155242
 Rigidbody2D:
@@ -381,7 +382,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -164718
+  m_InstanceId: 276934
 --- !u!114 &1645889190181192849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +411,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodStain: {fileID: 8319049851584298111, guid: 2757c0320f2fe5d4491da7129708a278, type: 3}
+--- !u!95 &8089095476608742007
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153852605323155240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f23955bb83e4e9a45b012614b4f135e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +480,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d997d09faa7b18f4f9f5bbd607d49076, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -481,8 +501,8 @@ SpriteRenderer:
   m_SortingLayerID: 844269633
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 395f6b9556f14704790df6035be6ee3a, type: 3}
-  m_Color: {r: 0.4392157, g: 0.20392157, b: 0.4117647, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 99d8f3260c2f70449b43211fea09c1fb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
