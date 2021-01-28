@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 2353181138305019007}
   - component: {fileID: 1975666177006109952}
   - component: {fileID: 1018924166755092962}
+  - component: {fileID: 414355464}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -402,6 +403,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 414355464}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerHealthBarController, Assembly-CSharp
+        m_MethodName: UpdateHealthBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCollisionWithTransformEvent:
     m_PersistentCalls:
       m_Calls:
@@ -457,7 +470,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 127016
+  m_InstanceId: 85420
 --- !u!114 &153135895677720490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,6 +564,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a107cda05b1f244e9b9102fcda6429f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &414355464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153852605323155240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37828e73a5a6f3746bb5d243499c3696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarTransform: {fileID: 0}
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0

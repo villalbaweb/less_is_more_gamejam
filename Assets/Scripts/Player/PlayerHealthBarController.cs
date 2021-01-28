@@ -5,26 +5,25 @@ namespace LessIsMore.Player
     public class PlayerHealthBarController : MonoBehaviour
     {
         // config
-        [SerializeField] PlayerHealthController playerHealthController = null;
+        [SerializeField] RectTransform healthBarTransform = null;
+
+        // cache
+        PlayerHealthController _playerHealthController;
 
         private void Awake() 
         {
+            _playerHealthController = GetComponent<PlayerHealthController>();
             UpdateHealthBar();
         }
 
-        public void OnHealthDamage()
+        public void UpdateHealthBar()
         {
-            UpdateHealthBar();
-        }
+            if (!healthBarTransform) return;
 
-        private void UpdateHealthBar()
-        {
-            if (!playerHealthController) return;
-
-            float lifePropertyLeft = (float)playerHealthController.HealthPoints / (float)playerHealthController.MaxHealthPoints;
+            float lifePropertyLeft = (float)_playerHealthController.HealthPoints / (float)_playerHealthController.MaxHealthPoints;
             print(lifePropertyLeft);
 
-            transform.localScale = new Vector3(lifePropertyLeft, 1, 1);
+            healthBarTransform.localScale = new Vector3(lifePropertyLeft, 1, 1);
         }
     }
 }
