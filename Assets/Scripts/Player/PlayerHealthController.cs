@@ -10,19 +10,22 @@ namespace LessIsMore.Player
         [SerializeField] int healthPoints = 20;
         [SerializeField] UnityEvent onDie = null;
 
+        // properties
+        public int MaxHealthPoints => maxHealthPoints;
+        public int HealthPoints => healthPoints;
+
         public void IncreaseHealth(int increaseHealthPoints)
         {
             healthPoints += increaseHealthPoints;
 
-            if(healthPoints > maxHealthPoints) 
-            {
-                healthPoints = maxHealthPoints;
-            }
+            healthPoints = Mathf.Clamp(healthPoints, 0, maxHealthPoints);
         }
 
         public void DecreaseHealthPoint()
         {
             healthPoints --;
+
+            healthPoints = Mathf.Clamp(healthPoints, 0, maxHealthPoints);
 
             if(healthPoints <= 0)
             {
