@@ -470,7 +470,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 85420
+  m_InstanceId: 97640
 --- !u!114 &153135895677720490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +543,21 @@ MonoBehaviour:
       - m_Target: {fileID: 1018924166755092962}
         m_TargetAssemblyTypeName: LessIsMore.Player.PlayerDieHandler, Assembly-CSharp
         m_MethodName: OnPlayerDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHealthIncrease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 414355464}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerHealthBarController, Assembly-CSharp
+        m_MethodName: UpdateHealthBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

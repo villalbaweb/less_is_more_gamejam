@@ -21,7 +21,6 @@ namespace LessIsMore.Player
             if (!healthBarTransform) return;
 
             float lifePropertyLeft = (float)_playerHealthController.HealthPoints / (float)_playerHealthController.MaxHealthPoints;
-            print(lifePropertyLeft);
 
             healthBarTransform.localScale = new Vector3(lifePropertyLeft, 1, 1);
         }
