@@ -154,10 +154,10 @@ GameObject:
   - component: {fileID: 1018924166755092962}
   - component: {fileID: 6153852605323155235}
   - component: {fileID: 6153852605323155234}
-  - component: {fileID: 1645889190181192849}
   - component: {fileID: 153135895677720490}
   - component: {fileID: 8003500639136822270}
   - component: {fileID: 256455983797245189}
+  - component: {fileID: 2353181138305019007}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -419,10 +419,9 @@ MonoBehaviour:
   onDieEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1645889190181192849}
-        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerDieParticleSystemHandler,
-          Assembly-CSharp
-        m_MethodName: PlayDieParticleSystems
+      - m_Target: {fileID: 2353181138305019007}
+        m_TargetAssemblyTypeName: LessIsMore.Core.ParticleSystemHandler, Assembly-CSharp
+        m_MethodName: PlayParticleSystems
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -472,22 +471,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -8228
---- !u!114 &1645889190181192849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153852605323155240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41fbda5ed2067aa4999bf4cb127844ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dieParticleSystems:
-  - {fileID: 1554693788105764423, guid: 6934416ae03fbcd4781fd7a199c749dd, type: 3}
-  - {fileID: 1554693788105764423, guid: 862343a56accdad4a9866f124241a9be, type: 3}
+  m_InstanceId: 111598
 --- !u!114 &153135895677720490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +509,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49d73411f74f564fa5c033754524540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2353181138305019007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153852605323155240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d60c35ded9b2b4cab77992d4ee99bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystemsToPlay:
+  - {fileID: 1554693788105764423, guid: 862343a56accdad4a9866f124241a9be, type: 3}
+  - {fileID: 1554693788105764423, guid: 6934416ae03fbcd4781fd7a199c749dd, type: 3}
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0
