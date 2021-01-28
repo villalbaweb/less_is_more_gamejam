@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 8003500639136822270}
   - component: {fileID: 256455983797245189}
   - component: {fileID: 2353181138305019007}
+  - component: {fileID: 1975666177006109952}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -431,6 +432,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1975666177006109952}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerHealthController, Assembly-CSharp
+        m_MethodName: DecreaseHealthPoint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6153852605323155235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,7 +484,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 111598
+  m_InstanceId: 119422
 --- !u!114 &153135895677720490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +537,20 @@ MonoBehaviour:
   particleSystemsToPlay:
   - {fileID: 1554693788105764423, guid: 862343a56accdad4a9866f124241a9be, type: 3}
   - {fileID: 1554693788105764423, guid: 6934416ae03fbcd4781fd7a199c749dd, type: 3}
+--- !u!114 &1975666177006109952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153852605323155240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e56602fd0545df41b3ac11c9330ef71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 20
+  healthPoints: 20
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0
