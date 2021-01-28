@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2043273628684594523}
   - component: {fileID: 6554400675950057410}
   - component: {fileID: 1810208111853299253}
+  - component: {fileID: 3285713676743014634}
   m_Layer: 12
   m_Name: Blood Pickup
   m_TagString: Untagged
@@ -163,3 +164,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf65abded5c1754eb635df6db042d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3285713676743014634}
+        m_TargetAssemblyTypeName: LessIsMore.Core.ParticleSystemHandler, Assembly-CSharp
+        m_MethodName: PlayParticleSystems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3285713676743014634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043273628684594525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d60c35ded9b2b4cab77992d4ee99bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystemsToPlay:
+  - {fileID: 1554693788105764423, guid: 862343a56accdad4a9866f124241a9be, type: 3}
+  - {fileID: 1554693788105764423, guid: 6934416ae03fbcd4781fd7a199c749dd, type: 3}
