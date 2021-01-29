@@ -495,7 +495,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48360
+  m_InstanceId: 56468
 --- !u!114 &153135895677720490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +577,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7718280175591311068}
+        m_TargetAssemblyTypeName: LessIsMore.Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: DieSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHealthIncrease:
     m_PersistentCalls:
       m_Calls:
@@ -631,10 +643,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945069bde91ab45438f61c6e1168f606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitSound: {fileID: 8300000, guid: 50cf331bd23d06f4281aaadd7dbc07e0, type: 3}
+  hitSound: {fileID: 8300000, guid: e8a37fdf4e02ce04280a07f722ec0385, type: 3}
   jumpSound: {fileID: 8300000, guid: 769097bc0e8c60a4f961b4efa2d0068f, type: 3}
+  dieSound: {fileID: 8300000, guid: 50cf331bd23d06f4281aaadd7dbc07e0, type: 3}
   hitSoundVolume: 0.75
   jumpSoundVolume: 0.75
+  dieSoundVolume: 0.75
 --- !u!1 &6153852605631765888
 GameObject:
   m_ObjectHideFlags: 0

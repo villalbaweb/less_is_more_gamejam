@@ -8,11 +8,14 @@ namespace LessIsMore.Player
         // config
         [SerializeField] AudioClip hitSound = null;
         [SerializeField] AudioClip jumpSound = null;
+        [SerializeField] AudioClip dieSound = null;
         
         [Range(0, 1)]
         [SerializeField] float hitSoundVolume = 0.75f;
         [Range(0, 1)]
         [SerializeField] float jumpSoundVolume = 0.75f;
+        [Range(0, 1)]
+        [SerializeField] float dieSoundVolume = 0.75f;
 
 
         // cache
@@ -31,6 +34,11 @@ namespace LessIsMore.Player
         public void JumpSoundPlay()
         {
             _gameSoundController.PlayClipAtCamera(jumpSound, jumpSoundVolume);
+        }
+
+        public void DieSoundPlay()
+        {
+            _gameSoundController.PlayClipAtCamera(dieSound, dieSoundVolume);
         }
     }
 }
