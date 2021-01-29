@@ -6,10 +6,12 @@ namespace LessIsMore.Portal
     {
         // config
         [SerializeField] Transform spawnPos = null;
+        [SerializeField] ParticleSystem spawnParticles = null;
 
         private void OnTriggerEnter2D(Collider2D other) 
         {
             other.gameObject.transform.position = spawnPos.position;
+            spawnParticles.Play();
         }
     }
 }
