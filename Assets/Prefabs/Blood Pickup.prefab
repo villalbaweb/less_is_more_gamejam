@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1810208111853299253}
   - component: {fileID: 3285713676743014634}
   - component: {fileID: 5494283735138530695}
+  - component: {fileID: 6444330680067027221}
   m_Layer: 12
   m_Name: Blood Pickup
   m_TagString: Untagged
@@ -193,6 +194,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6444330680067027221}
+        m_TargetAssemblyTypeName: LessIsMore.Pickup.PickupSoundController, Assembly-CSharp
+        m_MethodName: PickupSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3285713676743014634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,3 +234,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissapearTime: 10
+--- !u!114 &6444330680067027221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043273628684594525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9272e443b0d7d8948b7eda6c3210d797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: 097af0f8ad4595b45b2504d2aa16535b, type: 3}
+  pickupSoundVolume: 0.5
