@@ -281,4 +281,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sawingSound: {fileID: 8300000, guid: 65dd2551595b62842a4da657b273d43e, type: 3}
-  sawingSoundVolume: 0.75
+  sawingSoundVolume: 0.2
