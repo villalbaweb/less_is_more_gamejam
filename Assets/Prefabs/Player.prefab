@@ -495,7 +495,7 @@ MonoBehaviour:
   - {x: -0.14787772, y: 0.31844962, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 56468
+  m_InstanceId: 192966
 --- !u!114 &153135895677720490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +699,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: d997d09faa7b18f4f9f5bbd607d49076, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
