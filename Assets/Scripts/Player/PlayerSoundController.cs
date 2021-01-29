@@ -18,7 +18,7 @@ namespace LessIsMore.Player
 
         public void HurtSoundPlay()
         {
-            _gameSoundController.PlayClipAtCamera(hitSound);
+            _gameSoundController.PlayClipAtCamera(hitSound, 0.75f);
         }
     }
 }
